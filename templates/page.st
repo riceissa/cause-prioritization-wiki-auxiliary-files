@@ -17,16 +17,18 @@
     <link href="$base$/css/print.css" rel="stylesheet" media="print" type= "text/css" />
     $endif$
     <!--[if IE]><link href="$base$/css/ie.css" rel="stylesheet" media="screen, projection" type="text/css" /><![endif]-->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZH7VMWRKML"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-57183088-1', 'auto');
-      ga('send', 'pageview');
-    
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZH7VMWRKML');
     </script>
+
+    <link rel="stylesheet" href="/css/tablesorter.css">
   </head>
   <body>
     <div id="doc3" class="yui-t1">
@@ -52,7 +54,15 @@
         </div>
     </div>
     $javascripts$
+    <script src="/jquery-latest.min.js"></script>
+    <script src="/jquery.tablesorter.js"></script>
+    <script src="/anchor.min.js"></script>
     $expire()$
     $getuser()$
+<script>
+    \$(function(){\$("table").tablesorter();});
+    anchors.add('h1:not(.pageTitle)');
+    anchors.add();
+</script>
   </body>
 </html>
