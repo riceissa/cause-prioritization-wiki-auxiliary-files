@@ -18,19 +18,19 @@
 #wikipage a:visited { color: #0B0080; }
 #wikipage a:hover, #wikipage a:active { text-decoration:underline; }
 
-a.footnoteRef {
+/* a.footnoteRef {
     text-decoration: none;
 }
 
 a.footnoteRef:before {
    content: "["; 
-   vertical-align: super;
+   vertical-align: top;
 }
 
 a.footnoteRef:after {
    content: "]"; 
-   vertical-align: super;
-}
+   vertical-align: top;
+} */
 
 code {
     background-color: #eee;

@@ -42,9 +42,15 @@ dl dd { margin-left: 1em; }
 th, td { padding: .5em; }
 th { font-weight: bold; }
 caption { margin-bottom: .5em; text-align: center; }
-sup { vertical-align: super; }
+/* sup { vertical-align: super; } */
+sup {
+	vertical-align: top;
+	/* vertical-align: baseline; */
+	position: relative;
+	top: -0.4em;
+}
 sub { vertical-align: sub; }
-sub, sup { line-height: 0.3em; }
+/* sub, sup { line-height: 0.3em; } */
 p, fieldset, table, pre { margin-bottom: 1em; }
 button, input[type="checkbox"], input[type="radio"], input[type="reset"], input[type="submit"], input[type="button"] { padding: 1px; }
 
@@ -155,6 +161,8 @@ box-shadow: #555 0 0 10px;
 }
 /* Deal with multiple footnotes one after another; Charuru */
 sup + sup { margin-left: 2px; }
+
+.footnoteRef + .footnoteRef { margin-left: 2px; }
 
 /* Make theme responsive */
 @media (max-width: 768px) {
